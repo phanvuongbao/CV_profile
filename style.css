@@ -237,3 +237,12 @@ header .navDiv,
 header ul label{
     display: none;
 }
+.education span{
+    font-weight:700;
+    font-size: 30px;
+    color:#24BAE3;
+    
+}
+.education h3{
+    list-style: inside;
+}
