@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&family=Montserrat:wght@100&family=Poppins:ital,wght@0,100;1,100;1,600;1,700&display=swap');
+:root{
+    --bodrer: 1px solid #dce1e4;
+    --gradient: linear-gradient(
+        -45deg, #ae99b2, #24BAE3
+    );
+    --box-shadow:5px 5px 15px #c1c8d3,
+    -5px -5px 15px #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #eaeaea;
+    color: #3c3e41;
+    margin: 0;
+    font-size: 15px;
+}
+
+header .logo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+a{
+    color: #3c3e41;
+    text-decoration: none;
+}
+
+header{
+    padding: 10px;
+    width: calc(100% -20px);
+    border-bottom: var(--bodrer);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #eaeaea;
+    z-index:1 ;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header ul li{
+    padding: 0 30px;
+}
+
+
+.container{
+    width: 1200px;
+    max-width: 90% ;
+    margin: 150px auto;
+}
+
+.banner{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    border-bottom: var(--bodrer);
+    padding-bottom: 50px ;
+}
+
+.banner .content h1{
+    font-size: 4.5rem;
+    margin: 0;
+}
+
+.gradientText{
+    display: inline-block;
+    background-image: var(--gradient) ;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+.job::before{
+    content:  attr(data-job1);
+    overflow: hidden;
+    display: inline-flex;
+    animation: 
+    effectText 1s linear infinite alternate,
+    changeText 4s linear infinite 
+    ;
+}
+
+@keyframes effectText {
+    from{
+        max-width: 0;
+    } to{
+        max-width: 500px;
+    }
+}
+
+@keyframes changeText{
+    0%{
+        content: attr(data-job1);
+    } 100%{
+        content: attr(data-job2);
+    }
+}
+
+.find{
+    margin-top: 50px;
+}
+
+.find ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.find ul li{
+    width: 50px;
+    height: 50px;
+    box-shadow: var(--box-shadow);
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.find ul li:hover{
+    color: #fff;
+    background-image: var(--gradient);
+}
+.banner .avatar img{
+    width: 90%;
+}
+.banner .avatar{
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.banner .avatar::before{
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    box-shadow: var(--box-shadow);
+    content: '';
+    bottom: 0;
+    z-index:-1  ;
+}
+
+.title{
+    text-align: center;
+    padding-top: 100px ;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.listSkill{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border-bottom: var(--bodrer);
+    padding-bottom: 50px;
+    margin-top: 50px;
+}
+.listSkill .evaluate{
+    width: 100%;
+    height: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+.listSkill .evaluate::before{
+    position: absolute;
+    height: 100%;
+    width: var(--point);
+    content: '';
+    background-image: var(--gradient);
+    border-radius: 10px;
+}
+
+.listProject{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-bottom: var(--bodrer);
+    padding-bottom: 50px;
+}
+.listProject .item{
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+.listProject .item img{
+    width: 90%;
+    border-radius: 20px;
+}
+
+/* CONTACT */
+.contact{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.contact li{
+    width: 50px;
+    height: 50px;
+    box-shadow: var(--box-shadow);
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.contact li:hover{
+    color: #fff;
+    background-color: var(--gradient);
+}
+
+header input,
+header .navDiv,
+header ul label{
+    display: none;
+}

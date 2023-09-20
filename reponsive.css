@@ -1,0 +1,61 @@
+/* ipad */
+@media screen and (max-width:1024px){
+    .banner .content h1{
+        font-size: 2em;
+    }
+    .listProject{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* phone */
+@media screen and (max-width:767px){
+    header ul{
+        position: fixed;
+        background-color: #F0F3F5;
+        width: 70%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,70px);
+        margin: 0;
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+    header .navDiv{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    header label{
+        width: 50px;
+        height: 50px;
+        box-shadow: var(--box-shadow);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input#menu:checked ~ .nav{
+        transform: translateX(0);
+    }
+    header .nav label{
+        display: flex;
+        transform: translateX(20px);
+    }
+    .banner{
+        grid-template-columns: 1fr;
+    }
+    .banner .content{
+        padding-right: 0;
+    }
+    .banner .avatar{
+        grid-row-start: 1;
+    }
+    .listSkill,.listProject{
+        grid-template-columns: 1fr;
+    }
+
+}
